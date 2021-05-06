@@ -291,7 +291,7 @@ def pipelineQuery(database='test', collection='test1'):
 # 6W/36 = 1667 資料6萬筆 case 3
 # 4W/36 = 1112 資料4萬筆 case 4
 # 2W/36 = 556 資料2萬筆 case 5
-caseInfo = ['10萬筆資料','8萬筆資料','6萬筆資料','4萬筆資料','2萬筆資料']
+caseInfo = ['100000','80000','60000','40000','20000']
 databaseCollection = [{'database':'test','collection':'test1', 'Loops':2778},
                       {'database':'test','collection':'test2', 'Loops':2223},
                       {'database':'test','collection':'test3', 'Loops':1667},

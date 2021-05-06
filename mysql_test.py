@@ -181,9 +181,9 @@ def selectGroupByStationQuery(table, network='SMT'):
     return
 
 #效能測試1
-db, cursor=connect2mysql('127.0.0.1','root','recast203','test') #連線
+db, cursor=connect2mysql('127.0.0.1','root','0000','test') #連線
 
-caseInfo = ['10萬筆資料','8萬筆資料','6萬筆資料','4萬筆資料','2萬筆資料']
+caseInfo = ['100000','80000','60000','40000','20000']
 databaseCollection = [{'database':'test','collection':'test1', 'Loops':2778},
                       {'database':'test','collection':'test2', 'Loops':2223},
                       {'database':'test','collection':'test3', 'Loops':1667},
