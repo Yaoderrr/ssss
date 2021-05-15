@@ -292,18 +292,17 @@ def pipelineQuery(database='test', collection='test1'):
 # 4W/36 = 1112 資料4萬筆 case 4
 # 2W/36 = 556 資料2萬筆 case 5
 caseInfo = ['100000','20000']
-databaseCollection = [{'database':'test','collection':'test1', 'Loops':2778},
-                      {'database':'test','collection':'test5', 'Loops':556}
+databaseCollection = [{'database':'test','collection':'test1', 'Loops':556}
 
                       ]
-for i in range(2):
+for i in range(1):
   print('Case: ', i+1, ' ', caseInfo[i])
   insertTest(databaseCollection[i]['Loops'], data, databaseCollection[i]['database'], databaseCollection[i]['collection'])
-  #selectAllQuery(databaseCollection[i]['database'], databaseCollection[i]['collection'])
-  #selectStationQuery( databaseCollection[i]['database'], databaseCollection[i]['collection'])
+  selectAllQuery(databaseCollection[i]['database'], databaseCollection[i]['collection'])
+  selectStationQuery( databaseCollection[i]['database'], databaseCollection[i]['collection'])
   selectDateRangeQuery( databaseCollection[i]['database'], databaseCollection[i]['collection'])
-  #selectDateRangeCountQuery( databaseCollection[i]['database'], databaseCollection[i]['collection'])
-  #pipelineQuery( databaseCollection[i]['database'], databaseCollection[i]['collection'])
+  selectDateRangeCountQuery( databaseCollection[i]['database'], databaseCollection[i]['collection'])
+  pipelineQuery( databaseCollection[i]['database'], databaseCollection[i]['collection'])
 '''
 selectAllQuery('test','test1')
 selectAllQuery('test','test2')

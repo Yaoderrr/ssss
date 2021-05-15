@@ -190,20 +190,20 @@ def selectGroupByStationQuery(table, network='SMT'):
 #效能測試1
 db, cursor=connect2mysql('127.0.0.1','root','0000','test') #連線
 
-caseInfo = ['4000','2000']
+caseInfo = ['4000']
 databaseCollection = [
-                      {'database':'test','collection':'test4', 'Loops':111},
-                      {'database':'test','collection':'test5', 'Loops':55}
+                      {'database':'test','collection':'test4', 'Loops':111}
+                      
                      ]
 
-for i in range(2):
+for i in range(1):
   print('Case: ', i+1, ' ', caseInfo[i])
   insertTest(databaseCollection[i]['Loops'], data, databaseCollection[i]['collection'])
   selectAllQuery(databaseCollection[i]['collection'])
-  selectStationQuery(databaseCollection[i]['collection'])
+  #selectStationQuery(databaseCollection[i]['collection'])
   selectDateRangeQuery(databaseCollection[i]['collection'])
-  selectDateRangeCountQuery(databaseCollection[i]['collection'])
-  selectGroupByStationQuery(databaseCollection[i]['collection'])
+  #selectDateRangeCountQuery(databaseCollection[i]['collection'])
+  #selectGroupByStationQuery(databaseCollection[i]['collection'])
 '''
 selectAllQuery('test1')
 selectAllQuery('test2')
